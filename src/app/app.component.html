@@ -3,7 +3,18 @@
 <main>
     <ul id="users">
         <li>
-            <app-user></app-user>
+            <app-user (select)="getUserData($event)" [user]="users[0]"></app-user>
+        </li>
+        <li>
+            <app-user (select)="getUserData($event)" [user]="users[1]"></app-user>
+        </li>
+        <li>
+            <app-user (select)="getUserData($event)" [user]="users[2]"></app-user>
+        </li>
+        <li>
+            <app-user (select)="getUserData($event)" [user]="users[3]"></app-user>
         </li>
     </ul>
+
+    <h2>{{selectedUserName}}</h2>
 </main>
